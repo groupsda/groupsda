@@ -5,16 +5,22 @@ import com.sda.project.bookinglist.repository.NewsletterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class NewsletterService {
     @Autowired
     private NewsletterRepository newsletterRepository;
 
     public void insertNewsletter(final String email){
-        NewsletterEntity newsletterEntity = new NewsletterEntity();
-        newsletterRepository.save(NewsletterEntity.builder().email(email).build());
-    }
+        Optional <NewsletterEntity> newsletterEntity = newsletterRepository.findByEmail(email);
 
+
+        if (!newsletterEntity.isPresent()){
+
+            newsletterRepository.save(NewsletterEntity.builder().email(email).build());
+        }
+    }
 
 
 }
