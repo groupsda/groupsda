@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewsletterEntityToModelConverter {
 
-    public NewsletterModel toModelWithBuilder(final NewsletterEntity newsletterEntity){
+    public NewsletterModel toModel(final NewsletterEntity newsletterEntity){
 
         return NewsletterModel.builder().id(newsletterEntity.getId()).createdAt(newsletterEntity.getCreatedAt()).email(newsletterEntity.getEmail()).build();
 
