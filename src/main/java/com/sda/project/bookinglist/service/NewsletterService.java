@@ -5,6 +5,7 @@ import com.sda.project.bookinglist.repository.NewsletterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,6 +22,9 @@ public class NewsletterService {
             newsletterRepository.save(NewsletterEntity.builder().email(email).build());
         }
     }
-
+public List<NewsletterService> getAllNewsletters (){
+        List<NewsletterEntity> newsletterEntities = newsletterRepository.findAll();
+        return null;
+    }
 
 }
