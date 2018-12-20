@@ -38,9 +38,12 @@ return HttpStatus.OK;
     }
 
 
+    /*
     @PutMapping(value = "/newsletter")
     public HttpStatus updateEmail(@RequestParam("email") final  String email){
 
 
     }
+    */
+
 }
