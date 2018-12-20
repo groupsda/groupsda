@@ -36,4 +36,11 @@ return HttpStatus.OK;
     List<NewsletterModel> newsletterModels = newsletterService.getAllNewsletters();
     return newsletterModels;
     }
+
+
+    @PutMapping(value = "/newsletter")
+    public HttpStatus updateEmail(@RequestParam("email") final  String email){
+
+
+    }
 }
