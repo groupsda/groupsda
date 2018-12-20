@@ -8,27 +8,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 public class NewsletterService {
     @Autowired
     private NewsletterRepository newsletterRepository;
-    @Autowired
-    private NewsletterEntityToModelConverter newsletterEntityToModelConverter;
-
+@Autowired
+private NewsletterEntityToModelConverter newsletterEntityToModelConverter;
     public void insertNewsletter(final String email){
-        NewsletterEntity newsletterEntity = new NewsletterEntity();
-        newsletterRepository.save(NewsletterEntity.builder().email(email).build());
-    }
+        Optional <NewsletterEntity> newsletterEntity = newsletterRepository.findByEmail(email);
 
-    public List<NewsletterModel> getAllNewsletters(){
+
+       if (!newsletterEntity.isPresent()){
+
+           newsletterRepository.save(NewsletterEntity.builder().email(email).build());
+    }
+    }
+public List<NewsletterModel> getAllNewsletters(){
         List<NewsletterEntity> newsletterEntities = newsletterRepository.findAll();
-        List<NewsletterModel> newsletterModels = newsletterEntities.stream()
-                .map(newsletterEntityToModelConverter::toModel).collect(Collectors.toList());
-        return newsletterModels;
+        List<NewsletterModel> newsletterModels = newsletterEntities.stream().map(newsletterEntityToModelConverter::toModel).collect(Collectors.toList());
+    return newsletterModels;
     }
-
-
 
 }
