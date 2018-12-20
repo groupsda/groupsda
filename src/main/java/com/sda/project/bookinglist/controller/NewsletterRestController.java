@@ -36,4 +36,6 @@ return HttpStatus.OK;
     List<NewsletterModel> newsletterModels = newsletterService.getAllNewsletters();
     return newsletterModels;
     }
+
+
 }
