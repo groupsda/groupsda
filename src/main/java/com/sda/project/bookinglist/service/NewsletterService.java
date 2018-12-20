@@ -14,4 +14,7 @@ public class NewsletterService {
         NewsletterEntity newsletterEntity = new NewsletterEntity();
         newsletterRepository.save(NewsletterEntity.builder().email(email).build());
     }
+
+
+
 }
