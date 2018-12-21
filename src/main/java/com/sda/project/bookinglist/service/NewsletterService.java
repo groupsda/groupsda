@@ -32,4 +32,12 @@ public List<NewsletterModel> getAllNewsletters(){
     return newsletterModels;
     }
 
+    public NewsletterModel getNewslettersById(final Long id) {
+       Optional<NewsletterEntity> newsletterEntity = newsletterRepository.findById(id);
+        if(newsletterEntity.isPresent()){
+            return newsletterEntityToModelConverter.toModel(newsletterEntity.get());
+        }else{
+            throw new RuntimeException("could not found");
+        }
+    }
 }
