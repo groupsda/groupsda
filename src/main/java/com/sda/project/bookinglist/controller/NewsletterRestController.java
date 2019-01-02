@@ -2,14 +2,11 @@ package com.sda.project.bookinglist.controller;
 
 import com.sda.project.bookinglist.model.NewsletterModel;
 import com.sda.project.bookinglist.service.NewsletterService;
-import lombok.Data;
-import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.xml.ws.Response;
 import java.util.List;
 
 
