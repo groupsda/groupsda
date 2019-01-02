@@ -32,4 +32,35 @@ public List<NewsletterModel> getAllNewsletters(){
     return newsletterModels;
     }
 
-}
+    public NewsletterModel getNewslettersById(final Long id) {
+       Optional<NewsletterEntity> newsletterEntity = newsletterRepository.findById(id);
+        if(newsletterEntity.isPresent()){
+            return newsletterEntityToModelConverter.toModel(newsletterEntity.get());
+        }else{
+            throw new RuntimeException("could not found");
+        }
+    }
+
+
+    public void deleteNewsletterById( final Long id) {
+        Optional<NewsletterEntity> newsletterEntity = newsletterRepository.findById(id);
+        if (newsletterEntity.isPresent()){
+            newsletterRepository.delete(newsletterEntity.get());
+        }
+        else{
+            throw new RuntimeException("The newsletter you want to delete could not be found");
+        }
+    }
+    public void updateNewsletter (final NewsletterModel newsletterModel){
+        Optional<NewsletterEntity> newsletterEntity = newsletterRepository.findById(newsletterModel.getId());
+        if (newsletterEntity.isPresent()) {
+            newsletterEntity.get().setEmail(newsletterModel.getEmail());
+            newsletterRepository.save(newsletterEntity.get());
+        }else {
+            throw new RuntimeException("Newsletter you wanted to update could not be found");
+        }
+
+        }
+    }
+
+
