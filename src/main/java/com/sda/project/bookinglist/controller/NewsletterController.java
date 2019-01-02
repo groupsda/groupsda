@@ -15,7 +15,6 @@ public class NewsletterController {
 
     @Autowired
     private NewsletterService newsletterService;
-
     @GetMapping("/newsletter")
     public ModelAndView indexPage() {
         return new ModelAndView("index-old")
