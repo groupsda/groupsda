@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title Of Site -->
+    <title>Extretion</title>
+    <meta name="description"
+          content="Book a room in Tallinn now, bookaroomtallinn compares all  the best offers from Hotel rooms in Tallinn">
+    <meta name="keywords" content="booking, hotel, resort, travel, holiday, tour, accommodation, vocation, trip">
+    <meta name="author" content="bookaroomtallinn">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Fav and Touch Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="http://crenoveative.com/envato/extretion/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://crenoveative.com/envato/extretion/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="http://crenoveative.com/envato/extretion/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://crenoveative.com/envato/extretion/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="http://crenoveative.com/envato/extretion/images/ico/favicon.png">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" media="screen">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/component.css}" rel="stylesheet">
+
+    <!-- CSS Font Icons -->
+    <link rel="stylesheet" th:href="@{/css/open-iconic-bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/css/pe-icon-7-stroke.css}">
+    <link rel="stylesheet" th:href="@{/css/ionicons.css}">
+    <link rel="stylesheet" th:href="@{/css/etiline/style.css}">
+    <link rel="stylesheet" th:href="@{/css/flaticon-streamline-outline.css}">
+    <link rel="stylesheet" th:href="@{/css/around-the-world-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/rivolicons/style.css}">
+
+    <!-- Google Fonts -->
+    <link th:href="@{/css/css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/css(1)}" rel="stylesheet" type="text/css">
+
+    <!-- CSS Custom -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+    <!-- Add your style -->
+    <link th:href="@{/css/your-style.css}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script th:src="@{/js/html5shiv.min.js}"></script>
+    <script th:src="@{/js/respond.min.js}"></script>
+    <![endif]-->
+
+    <style type="text/css"></style>
+</head>
+
+<body class="" data-fr-c-s-loaded="true" style="">
+
+<!--LOGIN-->
+ <div th:replace="login::login"></div>
+<!--LOGIN-->
+
+<!-- start Container Wrapper -->
+<div class="container-wrapper colored-navbar-brand">
+
+    <!-- start Header -->
+    <div th:replace="header::header"></div>
+    <!-- end Header -->
+
+    <div class="clear"></div>
+
+    <div layout:fragment="content"></div>
+
+    <div class="clear"></div>
+    <!-- start Footer -->
+    <div th:replace="footer::footer"></div>
+    <!-- end Footer -->
+</div> <!-- / .wrapper -->
+<!-- end Container Wrapper -->
+
+<!-- start Back To Top -->
+<div id="back-to-top" style="display: none;">
+    <a href="http://crenoveative.com/envato/extretion/index-2.html#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- jQuery Cores -->
+<script type="text/javascript" th:src="@{js/jquery-1.11.3.min.js}"></script>
+<script type="text/javascript" th:src="@{js/jquery-migrate-1.2.1.min.js}"></script>
+
+<!-- Bootstrap Js -->
+<script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>
+
+<!-- Plugins - serveral jquery plugins that use in this template -->
+<script type="text/javascript" th:src="@{js/plugins.js}"></script>
+
+<!-- Custom js codes for plugins -->
+<script type="text/javascript" th:src="@{js/customs.js}"></script>
+
+<!-- Date Piacker -->
+<script type="text/javascript" th:src="@{js/bootstrap-datepicker.min.js}"></script>
+<script type="text/javascript" th:src="@{js/customs-datepicker.js}"></script>
+
+
+</body>
+</html>
