@@ -1,4 +1,4 @@
-package com.sda.project.bookinglist.entity;
+package com.sda.project.groupsda.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

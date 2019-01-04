@@ -1,9 +1,9 @@
-package com.sda.project.bookinglist.service;
+package com.sda.project.groupsda.service;
 
-import com.sda.project.bookinglist.converter.NewsletterEntityToModelConverter;
-import com.sda.project.bookinglist.entity.NewsletterEntity;
-import com.sda.project.bookinglist.model.NewsletterModel;
-import com.sda.project.bookinglist.repository.NewsletterRepository;
+import com.sda.project.groupsda.converter.NewsletterEntityToModelConverter;
+import com.sda.project.groupsda.entity.NewsletterEntity;
+import com.sda.project.groupsda.model.NewsletterModel;
+import com.sda.project.groupsda.repository.NewsletterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

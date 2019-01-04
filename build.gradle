@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'groupsda1'
+group = 'com.sda.project'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -35,7 +35,7 @@ dependencies {
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	runtimeOnly('com.h2database:h2')
 	runtimeOnly('mysql:mysql-connector-java')
-	compileOnly('org.projectlombok:lombok')
+	implementation('org.projectlombok:lombok')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
 }

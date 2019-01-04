@@ -1,4 +1,4 @@
-package com.sda.project.bookinglist.model;
+package com.sda.project.groupsda.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
