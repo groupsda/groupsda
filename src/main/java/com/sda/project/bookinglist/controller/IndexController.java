@@ -10,6 +10,8 @@ public class IndexController {
 
     @GetMapping("/")
     public ModelAndView indexPage() {
-        return new ModelAndView("index");
+
+        return new ModelAndView("index").addObject("newsletter", new NewsletterModel());
+
     }
 }
