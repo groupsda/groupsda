@@ -1,4 +1,4 @@
-package com.sda.project.bookinglist;
+package com.sda.project.groupsda;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

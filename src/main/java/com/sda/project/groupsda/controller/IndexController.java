@@ -1,6 +1,6 @@
-package com.sda.project.bookinglist.controller;
+package com.sda.project.groupsda.controller;
 
-import com.sda.project.bookinglist.model.NewsletterModel;
+import com.sda.project.groupsda.model.NewsletterModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;

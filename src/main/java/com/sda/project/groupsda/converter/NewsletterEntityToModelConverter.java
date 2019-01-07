@@ -1,8 +1,8 @@
-package com.sda.project.bookinglist.converter;
+package com.sda.project.groupsda.converter;
 
 
-import com.sda.project.bookinglist.entity.NewsletterEntity;
-import com.sda.project.bookinglist.model.NewsletterModel;
+import com.sda.project.groupsda.entity.NewsletterEntity;
+import com.sda.project.groupsda.model.NewsletterModel;
 import org.springframework.stereotype.Component;
 
 @Component

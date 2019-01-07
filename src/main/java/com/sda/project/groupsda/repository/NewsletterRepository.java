@@ -1,6 +1,6 @@
-package com.sda.project.bookinglist.repository;
+package com.sda.project.groupsda.repository;
 
-import com.sda.project.bookinglist.entity.NewsletterEntity;
+import com.sda.project.groupsda.entity.NewsletterEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

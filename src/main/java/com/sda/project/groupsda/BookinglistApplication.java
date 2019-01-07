@@ -1,4 +1,4 @@
-package com.sda.project.bookinglist;
+package com.sda.project.groupsda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

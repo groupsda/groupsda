@@ -1,7 +1,7 @@
-package com.sda.project.bookinglist.controller;
+package com.sda.project.groupsda.controller;
 
-import com.sda.project.bookinglist.model.NewsletterModel;
-import com.sda.project.bookinglist.service.NewsletterService;
+import com.sda.project.groupsda.model.NewsletterModel;
+import com.sda.project.groupsda.service.NewsletterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
