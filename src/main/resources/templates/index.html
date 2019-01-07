@@ -31,7 +31,7 @@
 
                     <div class="inner animated">
 
-                        <form class="row gap-20">
+                        <form th:action="@{/search}" th:object="${searchPropertyModel}"method="get" class="row gap-20">
 
                             <div class="col-xs-12 col-sm-12 form-lg">
 
@@ -40,7 +40,7 @@
                                     <label class="destination-search-3">Where do you want to go?</label>
 
                                     <div class="typeahead-field">
-                                        <input id="destination-search-3" name="destination-search-3" type="search"
+                                        <input id="destination-search-3"  name="destination-search-3" type="search"
                                                autocomplete="off" class="form-control" placeholder="Try to type: new">
                                     </div>
                                     <i class="fa fa-map-marker"></i>
@@ -52,7 +52,7 @@
 
                                 <div class="row gap-20">
 
-                                    <div class="col-xss-12 col-xs-6 col-sm-6">
+                                    <div  th:field="*{checkInDate}"  class="col-xss-12 col-xs-6 col-sm-6">
                                         <div class="form-group form-icon-right">
                                             <label for="dpd1">Check-in</label>
                                             <input name="dpd1" class="form-control" id="dpd1" placeholder="Check-in"
@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xss-12 col-xs-6 col-sm-6">
+                                    <div  th:field="*{checkOutDate}"  class="col-xss-12 col-xs-6 col-sm-6">
                                         <div class="form-group form-icon-right">
                                             <label for="dpd2">Check-out</label>
                                             <input name="dpd2" class="form-control" id="dpd2" placeholder="Check-out"
@@ -80,9 +80,7 @@
 
                                         <div class="form-group">
                                             <label>Rooms</label>
-                                            <div class="fancy-select"><select class="custom-select fancified"
-                                                                              id="change-search-room"
-                                                                              style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                            <select th:field="*{rooms}" class="custom-select fancified form-control" id="change-search-room">
                                                 <option value="0">Rooms</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -90,43 +88,27 @@
                                                 <option value="4">4‎</option>
                                                 <option value="5">5</option>
                                             </select>
-                                                <div class="form-control">Rooms</div>
-                                                <ul class="options">
-                                                    <li data-raw-value="0" class="selected">Rooms</li>
-                                                    <li data-raw-value="1">1</li>
-                                                    <li data-raw-value="2">2</li>
-                                                    <li data-raw-value="3">3</li>
-                                                    <li data-raw-value="4">4‎</li>
-                                                    <li data-raw-value="5">5</li>
-                                                </ul>
-                                            </div>
                                         </div>
-
+                                    </div>
                                     </div>
 
                                     <div class="col-xss-12 col-xs-4 col-sm-4">
 
                                         <div class="form-group">
                                             <label>Adults</label>
-                                            <div class="fancy-select"><select class="custom-select fancified"
-                                                                              id="change-search-adult"
-                                                                              style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
-                                                <option value="0">Adult</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4‎</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                                <div class="form-control">Adult</div>
-                                                <ul class="options">
-                                                    <li data-raw-value="0" class="selected">Adult</li>
-                                                    <li data-raw-value="1">1</li>
-                                                    <li data-raw-value="2">2</li>
-                                                    <li data-raw-value="3">3</li>
-                                                    <li data-raw-value="4">4‎</li>
-                                                    <li data-raw-value="5">5</li>
-                                                </ul>
+                                            <div class="col-xss-12 col-xs-4 col-sm-4">
+
+                                                <div class="form-group">
+                                                    <label>Adults</label>
+                                                    <select th:field="*{adults}" class="custom-select fancified form-control" id="change-search-room">
+                                                        <option value="0">Rooms</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4‎</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -136,40 +118,34 @@
 
                                         <div class="form-group">
                                             <label>Children</label>
-                                            <div class="fancy-select"><select class="custom-select fancified"
-                                                                              id="change-search-child"
-                                                                              style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
-                                                <option value="0">Child</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4‎</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                                <div class="form-control">Child</div>
-                                                <ul class="options">
-                                                    <li data-raw-value="0" class="selected">Child</li>
-                                                    <li data-raw-value="1">1</li>
-                                                    <li data-raw-value="2">2</li>
-                                                    <li data-raw-value="3">3</li>
-                                                    <li data-raw-value="4">4‎</li>
-                                                    <li data-raw-value="5">5</li>
-                                                </ul>
+                                            <div class="col-xss-12 col-xs-4 col-sm-4">
+
+                                                <div class="form-group">
+                                                    <label>Children</label>
+                                                    <select th:field="*{children}" class="custom-select fancified form-control" id="change-search-room">
+                                                        <option value="0">Rooms</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4‎</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                            </div>
+
 
                             <div class="col-xs-12">
 
                                 <div class="row">
 
                                     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
-                                        <button class="btn btn-block btn-primary btn-lg btn-icon">Search <span
-                                                class="icon"><i class="fa fa-search"></i></span></button>
+                                        <input type="submit" class="btn btn-block btn-primary btn-lg btn-icon">Search <span
+                                                class="icon"><i class="fa fa-search"></i></span></input>
                                     </div>
 
                                 </div>
@@ -284,23 +260,22 @@
 
                     <div class="GridLex-grid-noGutter-equalHeight GridLex-grid-center">
 
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
+                        <div  th:each="topDestination : ${topDestinationModels}" class="GridLex-col-3_sm-4_xs-6_xss-12">
                             <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
+                                <a th:href="@{'/search?city='} ${topDestination.city}">
                                     <div class="image">
-                                        <img src="./index_files/01.jpg" alt="Top Destinations">
+                                        <img th:src="'image/index/'+ ${topDestination.city}+'.jpg'" alt="Top Destinations">
                                     </div>
                                     <div class="content">
                                         <div class="row gap-10">
 
                                             <div class="col-xs-7 place">
-                                                <h4>Dubai</h4>
-                                                <p>Emirate</p>
+                                                <h4 th:text="${topDestination.city}"></h4>
+                                                <p th:text="${topDestination.country}"></p>
                                             </div>
 
                                             <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
+                                                <p th:text="${topDestination.amount} + ' hotels'">984 hotels</p>
                                                 <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
                                             </div>
 
@@ -310,196 +285,6 @@
                             </div>
 
                         </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/02.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Marrakesh</h4>
-                                                <p>Morocco</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/03.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>London</h4>
-                                                <p>England</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/04.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Montreal</h4>
-                                                <p>Canada</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/05.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Miami</h4>
-                                                <p>USA</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/06.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Rome</h4>
-                                                <p>Italy</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/07.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Paris</h4>
-                                                <p>France</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                            <div class="top-destination-item">
-                                <a href="http://crenoveative.com/envato/extretion/index-2.html#">
-                                    <div class="image">
-                                        <img src="./index_files/08.jpg" alt="Top Destinations">
-                                    </div>
-                                    <div class="content">
-                                        <div class="row gap-10">
-
-                                            <div class="col-xs-7 place">
-                                                <h4>Tokyo</h4>
-                                                <p>Japan</p>
-                                            </div>
-
-                                            <div class="col-xs-5 price">
-                                                <p>984 hotels</p>
-                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
                     </div>
 
                 </div>
