@@ -295,7 +295,7 @@
                         <p>We found <span class="text-primary font700">256</span> hotels with availability in <span
                                 class="text-primary font700">Paris</span>. Showing 1 - 30</p>
 
-                        <a href="result-map.html" class="show-on-map" style="background-image:url('images/show-on-map.gif');">
+                        <a href="result-map.html" class="show-on-map" style="background-image:url('image/show-on-map.gif');">
 									<span>
 										<img src="images/show-map-marker.png" alt="images" class="block">
 										<span class="bg-primary absolute">Show on map</span>
@@ -322,7 +322,7 @@
                     <div class="hotel-item-list-wrapper mb-40">
 
                         <div class="hotel-item-list">
-                            <div class="image" style="background-image:url('images/top-destinations/01.jpg');"></div>
+                            <div class="image" style="background-image:url('resources/static/image/top-destinations/01.jpg');"></div>
                             <div class="content">
                                 <div class="heading">
                                     <h4>Hotel Metropolitan Tokyo</h4>
@@ -334,8 +334,12 @@
                                 </div>
                             </div>
                             <div class="absolute-bottom">
-                                <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i
-                                        class="fa fa-check-circle"></i> Free Wifi in Room</p>
+                                <p class="text-primary">
+
+                                    <i class="fa fa-check-circle" th:text="${properyMddel.startsFrom}"></i> Breakfast Included <span class="mh-10">|</span> <i
+                                        class="fa fa-check-circle"></i> Free Wifi in Room
+                                </p>
+                                <a th
                             </div>
                             <div class="absolute-right">
                                 <div class="meta-option">
