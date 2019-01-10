@@ -1,24 +1,23 @@
-package com.sda.project.groupsda.entity;
+package com.sda.project.bookinglist.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
-@Data
+
+@Getter
+@Setter
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name= "address")
+@Table(name = "address")
 @EntityListeners(AuditingEntityListener.class)
 public class AddressEntity {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long addressId;
 
     @Column
@@ -33,12 +32,7 @@ public class AddressEntity {
     @Column
     private String country;
 
-    @ManyToOne(targetEntity = PropertyEntity.class)
-    @JoinColumn(name = "propertyId", referencedColumnName = "propertyId")
-    private PropertyEntity property;
-
     @OneToOne(targetEntity = RoomEntity.class)
     @JoinColumn(name = "roomId", referencedColumnName = "roomId")
     private RoomEntity room;
-
 }

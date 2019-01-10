@@ -1,28 +1,27 @@
-package com.sda.project.groupsda.entity;
+package com.sda.project.bookinglist.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.BatchSize;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "property")
 @EntityListeners(AuditingEntityListener.class)
-
-public class PropertyEntity {
+public class PropertyEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,14 +40,17 @@ public class PropertyEntity {
     @Column(unique = true, nullable = false)
     private String propertyName;
 
+    @Column
+    private String amenities;
+
+    @Column
+    @Size(max = 2048)
+    private String propertyDescription;
+
     @Column(precision = 10, scale = 2)
     private BigDecimal startsFrom;
 
     @BatchSize(size = 10)
-    @OneToMany(targetEntity = AddressEntity.class, mappedBy = "property", cascade = CascadeType.ALL)
-    private List<AddressEntity> addresses;
-
-    @BatchSize(size = 10)
-    @OneToMany(targetEntity = AddressEntity.class,mappedBy = "property",cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = RoomEntity.class, mappedBy = "property", cascade = CascadeType.ALL)
     private List<RoomEntity> rooms;
 }

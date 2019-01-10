@@ -1,4 +1,4 @@
-package com.sda.project.groupsda.model;
+package com.sda.project.bookinglist.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TopDestinationModel {
-    private long amount;
+public class AddressModel {
+
+    private Long addressId;
+    private String street;
+    private String postalCode;
     private String city;
     private String country;
+    private RoomModel roomModel;
 }

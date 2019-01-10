@@ -1,24 +1,32 @@
-package com.sda.project.groupsda.model;
+package com.sda.project.bookinglist.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.exception.DataException;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class SearchPropertyModel {
 
     private String destination;
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date checkInDate;
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date checkOutDate;
+
     private int rooms;
     private int adults;
     private int children;
+
+    private BigDecimal startsFrom;
+
 }

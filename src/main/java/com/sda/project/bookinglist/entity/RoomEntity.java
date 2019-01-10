@@ -1,5 +1,4 @@
-package com.sda.project.groupsda.entity;
-
+package com.sda.project.bookinglist.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,13 +12,14 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Builder
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "room")
 @EntityListeners(AuditingEntityListener.class)
 public class RoomEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long roomId;
@@ -34,13 +34,17 @@ public class RoomEntity implements Serializable {
     @LastModifiedDate
     private Date modifiedAt;
 
+    @Column
     private String roomName;
 
+    @Column
     private int maximumPerson;
 
+    @Column
     private String includes;
 
-    private BigDecimal pricePerNigh;
+    @Column
+    private BigDecimal pricePerNight;
 
     @ManyToOne(targetEntity = PropertyEntity.class)
     @JoinColumn(name = "propertyId", referencedColumnName = "propertyId")
@@ -48,4 +52,5 @@ public class RoomEntity implements Serializable {
 
     @OneToOne(targetEntity = AddressEntity.class, mappedBy = "room", cascade = CascadeType.ALL)
     private AddressEntity address;
+
 }
