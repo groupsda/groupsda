@@ -2618,7 +2618,7 @@ select.form-control.multiple option {
 .tripadvisor-head {
     padding-left: 23px;
     padding-top: 1px;
-    background: url('../image/raty/tripadvisor.png') no-repeat left top
+    background: url('../images/raty/tripadvisor.png') no-repeat left top
 }
 
 
@@ -5155,7 +5155,7 @@ ul.multiple-sticky-nav > li.active a {
 
 
 /**
- * image-grid
+ * images-grid
  * https://github.com/taras-d/images-grid
  */
 

@@ -351,7 +351,7 @@
 	 * Star rating
 	 */
 	$('.tripadvisor-by-attr').raty({
-		path: 'image/raty',
+		path: 'images/raty',
 		starHalf: 'tripadvisor-half.png',
 		starOff: 'tripadvisor-off.png',
 		starOn: 'tripadvisor-on.png',
@@ -365,7 +365,7 @@
 	});
 	
 	$('.star-rating-12px').raty({
-		path: 'image/raty',
+		path: 'images/raty',
 		starHalf: 'star-half-sm.png',
 		starOff: 'star-off-sm.png',
 		starOn: 'star-on-sm.png',

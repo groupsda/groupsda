@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" th:href="@{/css/index.css}"/>
-</head>
-<body>
-<h1>Newsletter form</h1>
-<p th:text ="'Hello,' + ${user}"/>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
-<form action="#" th:action="@{/newsletter}" th:object="${newsletter}" method="post">
+<link rel="stylesheet" th:href="@{/css/index.css}"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<body>
+
+<p th:text="'Hello,' + ${user}"/>
+
+<h1>Newsletter Form</h1>
+
+<form th:action="@{/newsletter}" th:object="${newsletter}" method="post">
     <p>Email: <input type="text" th:field="*{email}"/></p>
     <p>
         <input type="submit" value="Subscribe"/>
         <input type="reset" value="Reset"/>
     </p>
-    <div class="col-xss-12 col-xs-4 col-sm-4 mt-10-xss">
-        <input type="submit" class="btn btn-block btn-danger" value="Submit">
-    </div>
 </form>
+
 </body>
 </html>

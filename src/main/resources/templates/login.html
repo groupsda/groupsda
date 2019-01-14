@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <body>
-<div class="modal fade modal-login modal-border-transparent in" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true" th:fragment="login">
+<div class="modal fade modal-login modal-border-transparent" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true" th:fragment="login">
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -42,7 +39,8 @@
                             <div class="row gap-5">
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="checkbox-block font-icon-checkbox">
-                                        <input id="remember_me_checkbox" name="remember_me_checkbox" class="checkbox" value="First Choice" type="checkbox">
+                                        <input id="remember_me_checkbox" name="remember_me_checkbox" class="checkbox" value="First Choice"
+                                               type="checkbox">
                                         <label class="" for="remember_me_checkbox">remember</label>
                                     </div>
                                 </div>
@@ -84,7 +82,8 @@
                         </div>
 
                         <div class="text-center">
-                            <button id="lost_login_btn" type="button" class="btn btn-link">Sign-in</button> or
+                            <button id="lost_login_btn" type="button" class="btn btn-link">Sign-in</button>
+                            or
                             <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
                         </div>
 
@@ -134,11 +133,9 @@
                         <div class="form-group mb-0">
                             <input id="register_password_confirm" class="form-control mb-5" type="password" placeholder="Confirm Password">
                         </div>
-
                     </div>
 
                     <div class="modal-footer pt-25 pb-5">
-
                         <div class="row gap-10">
                             <div class="col-xs-6 col-sm-6 mb-10">
                                 <button type="submit" class="btn btn-primary btn-block">Register</button>
@@ -149,17 +146,14 @@
                         </div>
 
                         <div class="text-left">
-                            Already have account? <button id="register_login_btn" type="button" class="btn btn-link">Sign-in</button>
+                            Already have account?
+                            <button id="register_login_btn" type="button" class="btn btn-link">Sign-in</button>
                         </div>
-
                     </div>
-
                 </form>
                 <!-- End | Register Form -->
-
             </div>
             <!-- End # DIV Form -->
-
         </div>
     </div>
 </div>
